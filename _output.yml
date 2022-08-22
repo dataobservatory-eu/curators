@@ -1,0 +1,42 @@
+bookdown::gitbook:
+  css: [css/style.css, css/box.css]
+  config:
+    toc:
+      before: |
+        <li><a href="https://curators.dataobservatory.eu/">"Introduction to the dataobservatory.eu Open Knowledge Platforms</a></li>
+      after: |
+        <li><a href="https://reprex.nl/" target="blank">Published by ReprexBooks</a></li>
+    edit: https://github.com/dataobservatory-eu/dataobservatory/curators/%s
+    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  extra_dependencies: awesomebox
+  language: english
+  toc: true
+  tof: true
+  toc_unnumbered: no
+  includes:
+    keep_tex: true
+    in_header: [latex/preamble.tex, latex/blackbox.tex, latex/infobox.tex, latex/bluebox.tex]
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book:
+  stylesheet: [css/style.css, css/box.css]
+bookdown::word_document2:
+    toc: false
+    tof: true
+    toc_unnumbered: no
+    reference_docx: docx/dataobservatorytemplate.docx
+    language: English
+bookdown::bs4_book:
+  repo:
+    base: https://github.com/dataobservatory-eu/curators
+    branch: main
+  theme:
+    primary: "#00348A"   # default .rmdnote = blue
+    danger:  "#db001c"   # default .rmdcaution = red
+    success: "#198754"   # default .rmdimportant = green
+    info:    "#E4007F"   # default .rmdtip = cyan, now magenta
+    warning: "#ffc107"   # default .rmdwarning = yellow
+    heading_font:
+       google: Roboto
