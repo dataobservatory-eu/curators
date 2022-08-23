@@ -1,0 +1,33 @@
+# Data Sources {#datasource}
+
+::: {.rmdnote data-latex="{note}"}
+
+We follow the principles of reproducible research, that increases `data quality` with the use of open algorithms, provision of full data (lifecycle) history, unit testing, facilitating external review and audit.
+
+:::
+
+
+### Microdata {.unnumbered}
+
+`Microdata datasets`: We initate professionally managed data collections for new data uses, and on behalf of our partners. Microdata datasets are open for various provisions, because they often contain observations about private individuals (raw survey data.) We harmonize surveys with existing datasets with the use of standardized questionnaire items, standard collection modes, a standard codebooks, so that our partners only pay for new data that is not existing in some open data source. As most taxpayer funded research data is free for reuse in Europe, survey harmonization brings many financial and quality benefits.
+
+### Processed open data {.unnumbered}
+
+`Processed data`: We process data from legally open sources (under the Open Data Directive), or from partners who want to publish their data. 
+
+Every year, the EU announces that billions and billions of data are now “open” again, but this is not gold. At least not in the form of nicely minted gold coins, but in gold dust and nuggets found in the muddy banks of chilly rivers. There is no rush for it, because panning out its value requires a lot of hours of hard work. Our goal is to automate this work to make open data usable at scale, even in trustworthy AI solutions.
+
+
+```{r, PanningGold, results='asis', out.width='70%'}
+knitr::include_graphics(here::here("jpg", "Slide8.jpg"))
+html_caption('Read our full blogpost: [Open Data - The New Gold Without the Rush](https://dataobservatory.eu/post/2021-06-18-gold-without-rush/)')
+```
+
+**Open data is usually not public**; whatever is legally accessible is usually not ready to use for commercial or scientific purposes. In Europe, almost all taxpayer funded data is legally open for reuse, but it is usually stored in heterogeneous formats, processed into an original government or scientific need, and with various and low documentation standards. Our expert data curators are looking for new data sources that should be (re-) processed and re-documented to be usable for a wider community. We would like to introduce our service flow, which touches upon many important aspects of data scientist, data engineer and data curatorial work.
+
+
+### Reprocessed data {.unnumbered}
+
+`Reprocessed data`: We reprocess datasets created by reliable experts and researchers to make them accessible in statistical software, library applications, APIs and the semantic web.  The reprocessed datasets follow a better, standardized structure, offer professional metadata for findability, accessibility, interoperability, reusability. We may change the variable coding for machine readability or with the application of ISO or SDMX standard codes for easier reuse.  We provide codebooks and visualizations for the reprocessed data.
+
+`Reused data`: Our reused data is an expert statistical interpretation and reprocessing if a public (legally open and available on the internet) and open (legally open but not directly available) dataset. For example, we improve the quality of Eurostat datasets with corrections made in the geographical coding or imputing the missing values with reliable, statistically sound ways. 

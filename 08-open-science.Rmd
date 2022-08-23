@@ -1,0 +1,6 @@
+# Open Science {#open-science}
+
+
+In the last decade, the evidence-based policy movement gained significant traction in Europe as well as globally. Its focus has been to increase the rigour of the evidence generated, to improve the credibility and understandability of evidence created for policy purposes.  As evidence-based policies often rely on scientific evidence, the evidence-based policy movement went hand in hand with the efforts to increase the transparency and reproducibility of scientific research (See: [@manifesto_for_reproducible_science_2017] and in an EU context [@JRC99722; @reproducibility_scientific_results_eu_2020; @progress_open_science_2020].)  
+
+In the US, the [Foundations for Evidence-based Policy Making Act of 2018](https://www.congress.gov/bill/115th-congress/house-bill/4174) was signed into law.  In Europe, the European Commission launched the *Knowledge4Policy* [K4P](https://knowledge4policy.ec.europa.eu/home_en) platform, along with several initiatives to make EU-funded research more accessible, notably, with changing some financial guidelines for its research program, and amending the [Open Data Directive](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32019L1024) in 2019.

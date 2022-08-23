@@ -12,16 +12,18 @@ linestretch: 1.1
 urlcolor: blue
 linkcolor: blue
 geometry: "left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm"
-bibliography: [book.bib, bib/dataset.bib, datainteroperability.bib, bib/datagovernance.bib, trustworthyAI.bib]
-url: https://introduction.dataobservatory.eu/
+bibliography: [bib/dataset.bib, bib/datainteroperability.bib, bib/datagovernance.bib, bib/trustworthyAI.bib]
+url: https://curators.dataobservatory.eu/
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This is the technical description of our dataobservatory.eu products.
+  This is an introduction for the dataobservatory.eu (future) curators.
 link-citations: yes
 github-repo: dataobservatory-eu/curators
 ---
 
-# Our Vision of a Modern Data Observatory {.unnumbered}
+# Open Collaboration With Data Curators {.unnumbered}
+
+
 
 ```{r setupknitr, include=FALSE}
 knitr::opts_chunk$set(echo      = FALSE, 
@@ -36,22 +38,79 @@ library(knitr)
 library(kableExtra)
 library(here)
 here::here()
-load(here("data", "population_ds.Rda"))
 source(here("R", "html_caption.R"))
 
 is_word_output <- ifelse (knitr::is_html_output()|knitr::is_latex_output(), FALSE, TRUE)
 ```
 
+::: {.rmdnote data-latex="{note}"}
 
-We are taking a new and modern approach to the `data observatory` concept, and modernizing it with the application of 21st century data and metadata standards, the new results of reproducible research, and data science. Various UN and OECD bodies, and particularly the European Union support or maintain more than 60 data observatories, or permanent data collection and dissemination points, but even these do not use these organizations and their members open data. We are building open-source data observatories, which run open-source statistical software that automatically processes and documents reusable public sector data (from public transport, meteorology, tax offices, taxpayer funded satellite systems, etc.) and reusable scientific data (from EU taxpayer funded research) into new, high quality statistical indicators.
+Big data creates **inequalities**, because only the world’s biggest global corporations, best endowed universities and strongest governments can maintain long, well-designed, global data collection programs.
+
+:::
+
+`Big data creates inequalities`.  Only the world’s biggest global corporations, best endowed universities and strongest governments can maintain long, well-designed, global data collection programs and build huge data lakes. We aim to balance these inequalities in the spirit of the new European Data Governance Act with fostering the re-use of public sector information, increasing the interoperability (integration capacity) of public and private data assets, and helping with practical tools `data sharing` and voluntary `data altruism`.
 
 ```{r, ObservatoryCollage, results='asis', out.width='80%'}
 knitr::include_graphics(here::here("png", "observatory_collage_16x9_800.png"))
 html_caption('*Various UN and OECD bodies, and particularly the European Union support or maintain more than 60 data observatories, or permanent data collection and dissemination points.*')
 ```
 
+We are taking a new and modern approach to the `data observatory` concept, and modernizing it with the application of 21st century data and metadata standards, the new results of reproducible research, and data science. Various UN and OECD bodies, and particularly the European Union support or maintain more than 60 data observatories, or permanent data collection and dissemination points, but even these do not use these organizations and their members open data. We are building open-source data observatories, which run open-source statistical software that automatically processes and documents reusable public sector data (from public transport, meteorology, tax offices, taxpayer funded satellite systems, etc.) and reusable scientific data (from EU taxpayer funded research) into new, high quality statistical indicators.
+
+::: {.rmdnote data-latex="{note}"}
 
 This document is intended for curators of the data observatories. For an introduction to the data observatories, please refer to [Our Vision of a Modern Data Observatory](https://introduction.dataobservatory.eu/)
+
+:::
+
+We believe in evidence-driven, open policy analysis, open science, and open government. We believe that humans are able to collect information, process and organize it, and form informed opinions. We believe in trustworthy artificial intelligence, AI that uses big data subject to human agency and ethical or legal constraints.
+
+We would like to find new collaboratos, professionals, researchers or citizen scientists in an institutional (business) or personal capacity who share our values and would like to create more informative datasets, indicators, and visualizations.  We follow the open collaboration method used in open knowledge systems (such as Wikipedia) or open source software development. We are following the [Contributor Covenant Code Of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) originating in open source software development to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation. 
+
+If you already know that you would collaborate with us on the creation of better data products, please refer to our practical [onboarding](#oboarding) essentials.
+
+## Motivation {-}
+
+**Who should become a data curator?** You do not need to be a data scientist, a statistician, or a data engineer.  We are looking for professionals, researchers, or citizen scientists who are interested in data and its visualization, and its potential to form the basis of informed business or policy decisions and to provide scientific or legal evidence. Our ideal curators share a passion for data-driven evidence or visualizations, and have a strong, subjective idea about the data that would inform them in their work. [See our inspriation chapter](#inspiration).
+
+**Why we need better data?** Data is hardly informative---it may be a page in a book, a file in an obsolete file format on a governmental server, an Excel sheet that you do not remember to have checked for updates.  Most data are useless, because we do not know how it can inform us, or we do not know if we can trust it. Unfortunately, even most data on open science repositories, or data made public on the basis of the EU open data regime (or the freedom of information regime of the U.S.) is useless without further work. 
+
+>“Data is potential information, analogous to potential energy: work is required to release it.”
+> ---citation
+
+## Data sources
+
+## Reproducible research {-}
+
+::: {.rmdnote data-latex="{note}"}
+
+We follow the principles of reproducible research, that increases `data quality` with the use of open algorithms, provision of full data (lifecycle) history, unit testing, facilitating external review and audit.
+
+:::
+
+We follow the principles of reproducible research, that increases `data quality` with the use of open algorithms, provision of full data (lifecycle) history. We aim to make review by senior staff or external audit as easy as possible.  Whenever possible, we rely on scientific peer-review for such an audit, and we are always open for suggestions, bug reports and other issues. Our observatories embrace the idea of open government, open science, and open policy analysis.
+
+Read more about our [reproducible research](#reproducible) practice. 
+
+## Informative data {-}
+
+_When was a file downloaded from the internet? What happened with it sense? Are their updates? Did the bibliographical reference was made for quotations? Missing values imputed? Currency translated? Who knows about it – who created a dataset, who contributed to it? Which is an intermediate format of a spreadsheet file, and which is the final, checked, approved by a senior manager?_ 
+
+```{r, SisyphusBodleian, results='asis', out.width='70%'}
+knitr::include_graphics(here::here("png", "Sisyphus_Bodleian_Library.png"))
+html_caption('Read our full blogpost: [The Data Sisyphus](https://dataobservatory.eu/post/2021-07-08-data-sisyphus/)')
+```
+
+The good news about documentation and data validation costs is that they can be shared. If many users need GDP/capita data from all over the world in euros, then it is enough if only one entity, a data observatory, collects all GDP and population data expresed in dollars, korunas, and euros, and makes sure that the latest data is correctly translated to euros, and then correctly divided by the latest population figures. These task are error-prone,and should not be repeaeted by every data journalist, NGO employee, PhD student or junior analyst. This is one of the services of our data observatory.
+
+
+## Impact {-}
+
+Our system is designed to help the `Findability`, `Accessibility`, `Interoperability`, and `Reuse` of digital assets, particularly datacubes and datasets used in statistics and data analysis. The FAIR “…emphasise machine-actionability (i.e., the capacity of computational systems to find, access, interoperate, and reuse data with none or minimal human intervention) because humans increasingly rely on computational support to deal with data as a result of the increase in volume, complexity, and creation speed of data.” 
+
+We publish your data, data shared with your, data collected for you, and reused data in a way that it is easy for computers, libraries, users to find it. Read more on our [FAIR metadata handling](https://dataset.dataobservatory.eu/articles/metadata.html) (our try our software for R users).
+
 
 **Governance principles**
 
@@ -90,13 +149,6 @@ been noted, and _will be reported to the authorities_!
 :::
  -->
 
-::: {.rmdnote data-latex="{note}"}
-
-Big data creates **inequalities**, because only the world’s biggest global corporations, best endowed universities and strongest governments can maintain long, well-designed, global data collection programs.
-
-:::
-
-`Big data creates inequalities`.  Only the world’s biggest global corporations, best endowed universities and strongest governments can maintain long, well-designed, global data collection programs and build huge data lakes. We aim to balance these inequalities in the spirit of the new European Data Governance Act with fostering the re-use of public sector information, increasing the interoperability (integration capacity) of public and private data assets, and helping with practical tools `data sharing` and voluntary `data altruism`.
 
 Our data observatories focus participants to collect only new data, and to `reuse already existing data` in the world’s statistical agencies, libraries, encyclopedias, or digital platforms. With harmonized data collection, particularly in the form of surveys, you can immediately give a history and international context to your data. We tap into governmental and scientific data collections that businesses or civil society organizations could never replicate data collected by satellites or anonymized data collected by tax or statistical authorities. We use metadata standardization and the RDF (semantic web) concept to constantly synchronize our data observatories with knowledge in the worlds large libraries, encyclopedias, and statistical agencies.
 
@@ -119,19 +171,13 @@ Our data observatories are data-as-service and research-as-service providers, an
  
  Our system is designed to help the `Findability`, `Accessibility`, `Interoperability`, and `Reuse` of digital assets, particularly datacubes and datasets used in statistics and data analysis. The FAIR “…emphasise machine-actionability (i.e., the capacity of computational systems to find, access, interoperate, and reuse data with none or minimal human intervention) because humans increasingly rely on computational support to deal with data as a result of the increase in volume, complexity, and creation speed of data.” 
 
-We publish your data, data shared with your, data collected for you, and reused data in a way that it is easy for computers, libraries, users to find it. Read more on our [FAIR metadata handling](https://dataset.dataobservatory.eu/articles/metadata.html) (our try our software for R users).
 
 
 
-## High Data Quality {.unnumbered #dataquality}
 
-::: {.rmdnote data-latex="{note}"}
 
-We follow the principles of reproducible research, that increases `data quality` with the use of open algorithms, provision of full data (lifecycle) history, unit testing, facilitating external review and audit.
 
-:::
-
-We follow the principles of reproducible research, that increases `data quality` with the use of open algorithms, provision of full data (lifecycle) history. We aim to make review by senior staff or external audit as easy as possible.  Whenever possible, we rely on scientific peer-review for such an audit, and we are always open for suggestions, bug reports and other issues. Our observatories embrace the idea of open government, open science, and open policy analysis. 
+ 
 
 Most small- and medium sized businesses, NGOs, civil society organizations, public policy units do not have the resources to employ data scientists and data engineers full-time, and such services on a part-time or ad hoc basis are too expensive for them.  This means that they are struggling with the data Sisyphus: munching spreadsheets into the desired format for a chart or a regression model, chasing missing data, trying to catch up on documentation or supervisory control, and in the meantime wasting countless of hours on boring work that computers to much better and with far less errors.
 
@@ -150,128 +196,7 @@ Our `data curators` professionally perform those error-prone and laborious tasks
 Tidy data is `ready to be published`, ready to placed on a visual chart, or placed on a map.  Tidiness is a rigorous concept in data science.  Our data observatories come with many extra services that help the effective communication of the observatory partners’ knowledge.  We automatically create charts and tables that are every day refreshed for your publications.  We can automatically place them into newsletter templates. We automatically place them on the (documentation part) of your website. We can even automate most of the process to put them into an annual report or statistical yearbook that you can publish in e-bookstores, send to global libraries, sell or give away to your stakeholders.
 
 
-_When was a file downloaded from the internet? What happened with it sense? Are their updates? Did the bibliographical reference was made for quotations? Missing values imputed? Currency translated? Who knows about it – who created a dataset, who contributed to it? Which is an intermediate format of a spreadsheet file, and which is the final, checked, approved by a senior manager?_ 
-
-```{r, SisyphusBodleian, results='asis', out.width='70%'}
-knitr::include_graphics(here::here("png", "Sisyphus_Bodleian_Library.png"))
-html_caption('Read our full blogpost: [The Data Sisyphus](https://dataobservatory.eu/post/2021-07-08-data-sisyphus/)')
-```
-
-The good news about documentation and data validation costs is that they can be shared. If many users need GDP/capita data from all over the world in euros, then it is enough if only one entity, a data observatory, collects all GDP and population data expresed in dollars, korunas, and euros, and makes sure that the latest data is correctly translated to euros, and then correctly divided by the latest population figures. These task are error-prone,and should not be repeaeted by every data journalist, NGO employee, PhD student or junior analyst. This is one of the services of our data observatory.
 
 
-## Catalogue {#intro-catalogue .unnumbered}
-
-Each of our data observatories has a data catalogue that gives an overview of about the data present and information on how best to use the data.  This catalogue provides bridges our datasets, codebooks, curatorial descriptions, and reusable visualizations.
-
-### Microdata {.unnumbered}
-
-`Microdata datasets`: We initate professionally managed data collections for new data uses, and on behalf of our partners. Microdata datasets are open for various provisions, because they often contain observations about private individuals (raw survey data.) We harmonize surveys with existing datasets with the use of standardized questionnaire items, standard collection modes, a standard codebooks, so that our partners only pay for new data that is not existing in some open data source. As most taxpayer funded research data is free for reuse in Europe, survey harmonization brings many financial and quality benefits.
-
-### Processed open data {.unnumbered}
-
-`Processed data`: We process data from legally open sources (under the Open Data Directive), or from partners who want to publish their data. 
-
-Every year, the EU announces that billions and billions of data are now “open” again, but this is not gold. At least not in the form of nicely minted gold coins, but in gold dust and nuggets found in the muddy banks of chilly rivers. There is no rush for it, because panning out its value requires a lot of hours of hard work. Our goal is to automate this work to make open data usable at scale, even in trustworthy AI solutions.
 
 
-```{r, PanningGold, results='asis', out.width='70%'}
-knitr::include_graphics(here::here("jpg", "Slide8.jpg"))
-html_caption('Read our full blogpost: [Open Data - The New Gold Without the Rush](https://dataobservatory.eu/post/2021-06-18-gold-without-rush/)')
-```
-
-**Open data is usually not public**; whatever is legally accessible is usually not ready to use for commercial or scientific purposes. In Europe, almost all taxpayer funded data is legally open for reuse, but it is usually stored in heterogeneous formats, processed into an original government or scientific need, and with various and low documentation standards. Our expert data curators are looking for new data sources that should be (re-) processed and re-documented to be usable for a wider community. We would like to introduce our service flow, which touches upon many important aspects of data scientist, data engineer and data curatorial work.
-
-### Reprocessed data {.unnumbered}
-
-`Reprocessed data`: We reprocess datasets created by reliable experts and researchers to make them accessible in statistical software, library applications, APIs and the semantic web.  The reprocessed datasets follow a better, standardized structure, offer professional metadata for findability, accessibility, interoperability, reusability. We may change the variable coding for machine readability or with the application of ISO or SDMX standard codes for easier reuse.  We provide codebooks and visualizations for the reprocessed data.
-
-`Reused data`: Our reused data is an expert statistical interpretation and reprocessing if a public (legally open and available on the internet) and open (legally open but not directly available) dataset. For example, we improve the quality of Eurostat datasets with corrections made in the geographical coding or imputing the missing values with reliable, statistically sound ways. 
-
-```{r introcatalogueexample, results='asis'}
-not_in_use <- FALSE
-if (not_in_use) {
-  readxl::read_excel(here::here("data", "examples.xlsx"), sheet="Catalogue") %>%
-  kbl ()  %>%
-  kable_styling(
-    bootstrap_options = c("striped", "hover", "condensed"), 
-    latex_options = "scale_down", 
-    full_width = T, font_size = 9 ) %>%
-  add_header_above(c("Dataset" = 2, "Agency" = 1, "Processing" = 3))
-} else if ( knitr::is_html_output() | knitr::is_latex_output()) {
-  readxl::read_excel(here::here("data", "examples.xlsx"), sheet="Catalogue") %>%
-    DT::datatable(
-      options = list(
-  initComplete = DT::JS(
-    "function(settings, json) {",
-    "$(this.api().table().header()).css({'font-size': '7px', 'background-color': '#00348a', 'color': '#fff'});",
-    "}"))
-    ) %>%
-    DT::formatStyle(columns = colnames(.$x$data), `font-size` = '11px') %>%
-    DT::formatStyle(columns = c(2), `font-size` = '8px') %>%
-    DT::formatStyle(columns = c(1,3,4), `font-size` = '10px') %>%
-    DT::formatStyle(columns = c(6), `font-size` = '6px')
-} else {
-  knitr::include_graphics(here::here("jpg", "dataobservatory-eu_catalogue_example-long.jpg"))
-}
-
-html_caption('*For more information of a data observatories inventory see the*  [Catalogue](#catalogue) *chapter*')
-```
-
-
-Our observatories conduct primary data collection via surveys, automated data collections and other primary methods.  
-
-
-## Datasets {.unnumbered #intro-datasets}
-
-A dataset is a collection of values, usually either numbers (if quantitative) or strings (if qualitative). Values are organized in two ways. Every value belongs to a variable and an observation. A variable contains all values that measure the same underlying attribute (like height, temperature, duration) across units. An observation contains all values measured on the same unit (like a person, or a day, or a race) across attributes. 
-
-We use the SMDX standard’s organizational principles in creating datasets. SDMX is a statistical standard that defines the way statistical data agencies (like the Eurostat, the World Bank, UN organizations, national statistical offices) collect, process, and distribute data. 
-
-```{r introdatasetexample, results='asis', out.width='70%'}
-font.size = "8pt"
-if (knitr::is_html_output()) {
- population_ds %>%
-    DT::datatable(
-      options = list(
-  initComplete = DT::JS(
-    "function(settings, json) {",
-    "$(this.api().table().header()).css({'font-size': '7px', 'background-color': '#00348a', 'color': '#fff'});",
-    "}"))
-    ) %>%
-    DT::formatStyle(columns = colnames(.$x$data), `font-size` = '7px') %>%
-    DT::formatStyle(columns = c(4), `font-size` = '8px') %>%
-    DT::formatStyle(columns = c(1,3,5,6,7), `font-size` = '9px')
-} else {
-  knitr::include_graphics(here::here("png", "population_ds_table.png"))
-  cat("The dataset can be used interactively on [html](https://datasets.html#our-dataset-specification/datasets.html#our-dataset-specification) version. We publish the authoritative copies on the independent open science repository [Zenodo](https://zenodo.org/communities/greendeal_observatory)")
-}
-
-html_caption('*For more information on our interpretation of a self-contained, globally synchornized dataset see the* [Datasets](#datasets) Chapter')
-```
-
-
-We use the W3C dataset standard based on RDF.  RDF started as a metadata standard to facilitate machine-to-machine synchronization via the internet. Using W3C RDF standards allows our data observatory to communicate with various commercial application made by Google, Microsoft, or non-commercial applications like Wikidata.
-
-SDMX and RDF are both ISO standards, and they are slowly converging.  SDMX predates the RDF and huge – it standardizes all aspects of international statistical cooperation.  We only use very small parts of SDMX to synchronize our data observatories with reliable data sources of Eurostat, OECD, and to make our data products compatible with theirs.
-
-For end-users, we make the datasets available in CSV, Excel, SPSS, and R formats with very rich documentation. In this example, our dataset is connected to libraries by subject, all the software used to create our interpretation of the raw Eurostat dataset, together with original dataset are clearly linked and documented. The dataset is ready for publication in various research applications. Apart from producing each dataset's authoritative copy in `csv`, `xlsx` and `sav` files, we make them available in our Rest API with JSON or standard SQL querries. (See \@ref(clients) [Manual Client Users](#clients).)
-
-
-Additionally, our visualizations (See \@ref(visualizations) [Visualizations](#visualizations) are stored on the more general Figshare repository with individual DOIs and metadata to support their discovery and reuse. 
-
-This database is connected to the Zenodo server (data and visualization access and application-to-application use) and Figshare (for visualizations), and our documentation website that describes each indicator in details and provides examples for its use.
-
-## Visualizations {#introvisualizations .unnumbered}
-
-::: {.rmdnote data-latex="{note}"}
-
-We provide ready-to-use new visualizations of datasets, tables, infographs whenever they are renewed, because some global data source adds new data to it.
-
-:::
-
-```{r introlinechartexample, results='asis' }
-knitr::include_graphics(here::here("jpg", "linechart_grouped_europe.jpg"))
-cat('*For more information see the* [Visualizations](#visualizations) *chapter.*')
-
-```

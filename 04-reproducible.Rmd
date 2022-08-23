@@ -1,0 +1,7 @@
+# Reproducible {#reproducible}
+
+::: {.rmdnote data-latex="{note}"}
+
+We follow the principles of reproducible research, that increases `data quality` with the use of open algorithms, provision of full data (lifecycle) history, unit testing, facilitating external review and audit.
+
+:::
