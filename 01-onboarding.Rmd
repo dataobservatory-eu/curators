@@ -29,7 +29,9 @@ You can download the Curatorial template from [here](https://raw.githubuserconte
 
 If you need help, get in touch with us, our preferred way of communication is  [keybase](https://keybase.io/). Keybase is an open-source, privacy and security concerned alternative to Slack and similar chat-based collaboration tools. Our observatories and Listen Local have their Keybase channels where you can interact with other curators and developers.
 
-For collaboration on articles, publications, analysis you must have a [Github account ID](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) Our project management dashboard and the FAQ is on Github, and all our source files will be versioned on Github. Github is the most popular open collaboration platform for open source software editors. If you do not write code, you will not contribute to our source files, but with a Github id you ask questions, take on tasks and report them ready on our project dashboard. 
+For collaboration on articles, publications, analysis you must have a [Github account ID](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) Our project management dashboard and the FAQ is on Github, and all our source files will be versioned on Github. Github is the most popular open collaboration platform for open source software editors. If you do not write code, you will not contribute to our source files, but with a Github id you ask questions, take on tasks and report them ready on our project dashboard.
+
+We have shared bibliographies on the open source, free [Zotero](https://www.zotero.org/) research assistant and we have a closed biblliography repository with BibLatex files on Github for the material that refer to in open science, open policy analysis, data science, and each other's work. The best place to share readings, bibliographies is *Zotero*, for preparing publications the Github accouunt. 
 
 
 ## Domain specific issues
