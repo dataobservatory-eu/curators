@@ -1,0 +1,84 @@
+# Collaboration tools {-}
+
+
+## Keybase {.unnumbered}
+
+No more long emails. Nobody’s left out. No more misunderstandings. No more waiting for feedback.
+
+**What do we need?**
+
+- A simple-to-use communication tool where you can opt-in to be informed on a real time basis, or completely ignore us for days – similar to Whatsapp Group, Microsoft Teams, Google Hangout, Slack; 
+
+- A single, secure storage for shared documents  – similar to Google Drive, Microsoft One Drive, Dropbox;
+
+- An integration with Github – a critical feature to at least the part of our team that is working on software code or long-form technical documentations;
+
+- Ability to oversee communications with more than 50 people with an option to streamline per topic, group, etc.;
+
+- To avoid using emails boxes, Whatsapp, Viber, etc. – part-timers are not flooded with messages at all times, while full-timers can reach out to each other at any time;
+
+- A space where we can communicate all the time without interrupting calls and meetings with clients on other platforms;
+An integration to a project management tool that we will use for larger projects;
+
+- A tool as simple as possible, light touch;
+
+- Since we work in the open source, open data, open collaboration community, we would like to use something that is open source – but we are willing to pay for solutions.
+
+And the winner is….KEYBASE.IO
+
+Keybase is a very neat, simple, lightweight team management / chat / social networking application that is extremely focused on privacy, security and encryption.
+
+**Keybase Key features**
+
+- Secure instant messaging, even with a timed self-destruction feature (e.g. for sharing passwords);
+Starts a Google Meet or Zoom video call natively with a single command;
+- Brings your Whatsapp chat to the more private and secure keybase chat on the fly;
+
+- Team chat rooms in real time. You can filter where you want to be involved, and you can always opt-out;
+
+-K-Drive (similar to OneDrive, Google Drive, Dropbox) – only for our team, and fully encrypted;
+Works with Github, and it even offers a more private version of Private Github Repos, encrypted gits;
+An integration with other platforms;
+It is neat, open source, simple, clean, and usually appreciated more in the open source community than Slack, its big corporation rival.
+
+Practical steps you need to follow to use Keybase
+
+1. Download & install Keybase from [https://keybase.io/](https://keybase.io/) on your computer.
+
+An easy procedure. Create yourself a professional login name – similarly to a professional github account, a professional email, etc. (you cannot change the name afterwards)
+
+2. Once you log in to the computer, go to *Devices*, and *Create a paper key*. Write this on paper, or print it, and store it somewhere very safe (not near your computer). This to recover the access in case you lose access to all your devices. 
+
+3. You can use Keybase simultaneously on multiple devices – Install Keybase on your smartphone, tablet or any other device. You will be guided through installation & paired with your computer.  
+
+4. Shall you need them, you have *two recovery options*: the paper key and your smartphone.
+
+5. If your smartphone breaks down and needs a replacement, you can add from your computer your new phone and deactivate the old one.
+
+6. Once you are in, look up `antaldaniel`.
+
+7. After a handshake Daniel will assist your smooth transition, help you find ways to our shared files, your project’s files, and set up filters, so you are not flooded with information, while never left out, unless you choose to. 
+
+8. Initially, we set up the following “Big teams”, as Keybase calls them, and we will send an invitation to join: 
+- `reprexfriends` for prospective team members, friends, and hoped-for-cooperation partners – partly for people we are discreetly asking to join us, or who want to know more about some of our work and cooperate with us;
+- [reprexcommunity](https://keybase.io/team/reprexcommunity) is an open landing page for anybody, it is a public interface. If you every land there `antaldaniel` will take you to the appropriate, otherwise invisible team room. 
+
+Each big team has four special members for a smooth transition: Daniel and Zuzana to assist you with getting familiar with Keybase, zoombot (just type `!zoom` to create a Zoom call with the team members present) and meetbot (that does the same with Google Meet, `!meet`). Daniel will gradually withdraw from some of the teams, once their support is not needed, though each team will have at least one Reprex co-founder present. We invite everybody to at least one team, but you can sign up to as many as you like, shall you find that convenient. 
+
+9. Whenever you are in a situation you want to ignore us (e.g. because you sit in your dayjob), just do it. If you have a smartphone, we are there, separated from your Whatsapp friends, work emails, and you can always check on us. We can always send you a secure (and even encrypted) message to get in touch, if needed. However, we will never ever bother you with long emails, Whatsapp messages and other annoying things.
+
+*Let’s keep things short, give access to the full picture when needed, and let you find out what mix of response time, details and filters works best for you.*
+
+## Github {-}
+
+`Git` in general, and **Github** in particular is a simultaneous collaboration for for any distributed team work - writing, programming, design work.  Git is an open source software which makes sure that your teamwork files are always synchronized, clashes are avoided (you modify the same part of a file at the same time with Daniel.) The only hard part to move to Git is to make sure that Git properly works on your computer - it needs to be installed differently on all Linux distros, Mac OSX version all Windows versions. On Windows, you must make sure that Git is on the startup path. Once you are there, you'll life will be much easier.
+
+Github is the most popular open collaboration platform for open source software editors. If you do not write code, you will not contribute to our source files, but with a Github id you ask questions, take on tasks and report them ready on our project dashboard.
+
+## Zotero{-}
+
+```{r zotero}
+knitr::include_graphics(file.path("png", "zotero.png"))
+```
+
+We have shared bibliographies on the open source, free [Zotero](https://www.zotero.org/) research assistant and we have a closed biblliography repository with BibLatex files on Github for the material that refer to in open science, open policy analysis, data science, and each other's work. The best place to share readings, bibliographies is *Zotero*, for preparing publications the Github account.
