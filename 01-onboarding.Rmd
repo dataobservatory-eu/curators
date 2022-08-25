@@ -16,28 +16,69 @@ You can download the Curatorial template from [here](https://raw.githubuserconte
 
 
 
-## Must have items {-}
+## Minimum Requirements for Curators
 
-- [x] Your biography must be machine readable.  It consists of a `TOML` heading and `markdown` body.  Change our template with any text editor. The editor should preferably not Word, or should save to standard text files in 'UTF-8' coding--non-English version Windows computers use your national character set by default, but you can always chose UTF-8 encoding in `Save as`. Even if you are not familiar with these markups, by opening the template, it should be self explanatory. 
-`name: New Curators` should be changed to `name: <Your Name>` 
-- [x] You must send a profile picture that is at least 500px wide (jpg or png format.) It can be bigger, and preferrably not a very "narrow" cut, as all avatars will be behind a ciruclar mask (see [other curators](https://music.dataobservatory.eu/#contributors).)
-- [ORCiD](https://orcid.org/) Your ORCiD ID, which will enable us to unambigously attribute your contributions. ORCiD is used in open science and other publishing to unambigously attribute copyrights and other intellectual property rights to a person. It takes a few minutes to register an account if you do not have it yet. We will attribute your name and ORCiD ID on all assets that you contribute to.
-- [x] At least one of these accounts where other contributors, curators can find you: a link to your _LinkedIn_, professional _Twitter_, professional _Facebook_, or _Academia_ or _Google Scholar_ account. Because of its diverse use among business, NGO and academic professionals, we recommend that you give a LinkedIn link. 
-- [ ] You must abide the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) (but *need not send* us proof) of pledging to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation. (See [translations](https://www.contributor-covenant.org/translations/) and the related [FAQ](https://www.contributor-covenant.org/faq/).)
+- [x] Your biography must be machine readable.  It consists of a `TOML` heading and `markdown` body.  Change our template with any text editor. The editor should preferably not Word, or should save to standard text files in 'UTF-8' coding--non-English version Windows computers use your national character set by default, but you can always chose UTF-8 encoding in ⏺ `Save as`. Even if you are not familiar with these markups, by opening the template, it should be self explanatory. 
+`name: New Curators` should be changed to `name: <Your Name>`
 
-## Preferred
+- [x] You must send a ⏺ profile picturethat is at least 500px wide (jpg or png format.) It can be bigger, and preferrably not a very "narrow" cut, as all avatars will be behind a ciruclar mask (see [other curators](https://music.dataobservatory.eu/#contributors).)
 
-If you need help, get in touch with us, our preferred way of communication is  [keybase](https://keybase.io/). Keybase is an open-source, privacy and security concerned alternative to Slack and similar chat-based collaboration tools. Our observatories and Listen Local have their Keybase channels where you can interact with other curators and developers.
+- [ORCiD](https://orcid.org/) Your ⏺ ORCiD ID, which will enable us to unambigously attribute your contributions. ORCiD is used in open science and other publishing to unambigously attribute copyrights and other intellectual property rights to a person. It takes a few minutes to register an account if you do not have it yet. We will attribute your name and ORCiD ID on all assets that you contribute to. It is particularly useful if your name has non-latin characters, your name is given in the Eastern name order, or your name has changed after marriage, etc. 
 
-For collaboration on articles, publications, analysis you must have a [Github account ID](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) Our project management dashboard and the FAQ is on Github, and all our source files will be versioned on Github. Github is the most popular open collaboration platform for open source software editors. If you do not write code, you will not contribute to our source files, but with a Github id you ask questions, take on tasks and report them ready on our project dashboard.
+```{r}
+knitr::include_graphics(file.path("png", "orcid.png"))
+```
 
-We have shared bibliographies on the open source, free [Zotero](https://www.zotero.org/) research assistant and we have a closed biblliography repository with BibLatex files on Github for the material that refer to in open science, open policy analysis, data science, and each other's work. The best place to share readings, bibliographies is *Zotero*, for preparing publications the Github accouunt. 
+
+- [x] At least one of these accounts where other contributors, curators can find you: a link to your _LinkedIn_, professional _Twitter_, professional _Facebook_, or _Academia_ or _Google Scholar_ account. Because of its diverse use among business, NGO and academic professionals, we recommend that you give a LinkedIn link.
+
+- [ ] You must abide the [⏯ Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) (but *need not send* us proof) of pledging to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation. (See [translations](https://www.contributor-covenant.org/translations/) and the related [FAQ](https://www.contributor-covenant.org/faq/).)
+
+```{r contributorcoventant}
+knitr::include_graphics(file.path("png", "contributor_covenant.png"))
+```
+
+
+## Communication and file sharing
+
+::: {.rmdnote data-latex="{note}"}
+
+If your contributions are occasional, probably you should use only **Keybase** to ask questions. If you will work with us frequently, or on more complex research outputs, it is best to use **Github** for file sharing and **Zotero** for sharing bibliographic citations.
+
+:::
+
+If you need help, get in touch with us, our preferred way of communication is  **Keybase**. It is an open-source, privacy and security concerned alternative to *Slack* and similar chat-based collaboration tools. Our observatories and Listen Local have their Keybase channels where you can interact with other curators and developers. [⇨ Annex / Collaboration tools / Keybase](#keybase) [⏯ keybase.io](#https://keybase.io/)
+
+Git and Github are open source and free services that allow the synchronization of text files, Word documents, Excel spreadsheets, and even software code in a much more reliable, and platform independent way than rival products, i.e., *Microsoft Sharepoint*, or *Microsoft OneDrive*, and *Google Drive*, or *Drobox*. It works reliable on Windows (Microsoft owns it), and Linux and Mac/BSD systems, too. Github is more difficult to use than Google Drive, but allows a lot more features, and some of them are essential for exchanging code or publication-ready articles.  A curator does not need to use Github, unless he or she wants to cooperate on scientific outputs.  [⏯ github.com](https://github.com//)
+
+- [x] If you have an existing Github account, please give us your [⏺ Github account ID](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) as the preferred way of exchanging files. 
+- [ ] If you do not have one, you can consider using Github, after consulting our annex: [⏩ Annex / Collaboration tools / Github](#keybase)
+
+Our project management dashboard and the FAQ is on Github, too, and all our source files will be versioned on Github. 
+
+## Bibliography management
+
+```{r onboardzotero}
+knitr::include_graphics(file.path("png", "zotero.png"))
+```
+
+- [x] We use the open source, free [Zotero](https://www.zotero.org/) research assistant. It can work with files created by Mendeley or OneNote. If you do not have a Zotero account, you should consider it after consulting our annex: [⏩ Annex / Collaboration tools / Zotero](#zotero)
+
+- [ ] For publications, we export (and slightly modify) citation data to BibLatex, a text format that is required for most scientific journal/book Tex templates. Because no research assistant exports precisely the same way, manual adjustment is always requires, so we keep up-to-date .bib collections on Github that are manually adjusted after exporting from Zotero, Mendeley, OneNote or downloaded directly from scientific libraries.
+
 
 
 ## Domain specific issues
 
+::: {.rmdnote data-latex="{note}"}
+
+Our [Digital Music Observatory]() and [Cultural Creative Sectors Industries Data Observatory]() work with artists and creative professionals, or [Digital Music Observatory]() and [Competition Data Observatory]() with legal professionals. We try to accommodate the needs of curators from different professional communities.
+
+:::
+
 ### Creative industries
-In some of our music related projects, we need to use Spotify, YouTube, Instagram accounts because they are used professionally. We can link these accounts to your profile if you use them in a professional capacity.
+In some of our music related projects, we need to use ⏺ Spotify, YouTube, Instagram accounts because they are used professionally. We can link these accounts to your profile if you use them in a professional capacity.
+
 - [Spotify Account Link](https://open.spotify.com/user/rx4xjay1368opqg2i7nabuo5c): You must have a free or premium account on Spotify. We will ask playlists initially on Spotify for ease of collaboration. If you do not use Spotify, you can create a free account for your Listen Local contributions.
 
 ### Academia 

@@ -66,20 +66,32 @@ This document is intended for curators of the data observatories. For an introdu
 
 We believe in evidence-driven, open policy analysis, open science, and open government. We believe that humans are able to collect information, process and organize it, and form informed opinions. We believe in trustworthy artificial intelligence, AI that uses big data subject to human agency and ethical or legal constraints.
 
-We would like to find new collaboratos, professionals, researchers or citizen scientists in an institutional (business) or personal capacity who share our values and would like to create more informative datasets, indicators, and visualizations.  We follow the open collaboration method used in open knowledge systems (such as Wikipedia) or open source software development. We are following the [Contributor Covenant Code Of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) originating in open source software development to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation. 
+We would like to find new collaboratos, professionals, researchers or citizen scientists in an institutional (business) or personal capacity who share our values and would like to create more informative datasets, indicators, and visualizations.  We follow the open collaboration method used in open knowledge systems (such as Wikipedia) or open source software development. We are following the [⏯ Contributor Covenant Code Of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) originating in open source software development to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation. 
 
-If you already know that you would collaborate with us on the creation of better data products, please refer to our practical [onboarding](#oboarding) essentials.
+If you already know that you would collaborate with us on the creation of better data products, please refer to our practical [⏩ onboarding](#oboarding) essentials.
 
 ## Motivation {-}
 
-**Who should become a data curator?** You do not need to be a data scientist, a statistician, or a data engineer.  We are looking for professionals, researchers, or citizen scientists who are interested in data and its visualization, and its potential to form the basis of informed business or policy decisions and to provide scientific or legal evidence. Our ideal curators share a passion for data-driven evidence or visualizations, and have a strong, subjective idea about the data that would inform them in their work. [See our inspriation chapter](#inspiration).
+**Who should become a data curator?** You do not need to be a data scientist, a statistician, or a data engineer.  We are looking for professionals, researchers, or citizen scientists who are interested in data and its visualization, and its potential to form the basis of informed business or policy decisions and to provide scientific or legal evidence. Our ideal curators share a passion for data-driven evidence or visualizations, and have a strong, subjective idea about the data that would inform them in their work. See our [⏩ See our inspriation chapter](#inspiration).
 
 **Why we need better data?** Data is hardly informative---it may be a page in a book, a file in an obsolete file format on a governmental server, an Excel sheet that you do not remember to have checked for updates.  Most data are useless, because we do not know how it can inform us, or we do not know if we can trust it. Unfortunately, even most data on open science repositories, or data made public on the basis of the EU open data regime (or the freedom of information regime of the U.S.) is useless without further work. 
 
 >“Data is potential information, analogous to potential energy: work is required to release it.”
 > ---citation
 
-## Data sources
+## Data sources {-}
+
+::: {.rmdnote data-latex="{note}"}
+
+We work with original, primary data collection, with big data collection from immaterial, small sources on the internet, and we aggregate data from open science or open government repositories.
+
+:::
+
+Working with data is hard.  No matter if the data is coming from a reliable social science archive, like GESIS (which holds plenty of social science data about Europe), or Eurostat (Europe's statistical umbrella authority), or from a new fieldwork, data needs to be polished to a form that it can be trusted and reused.
+
+Our curators point us to data that they find interesting or useful, usually from their research, professional or artistic practice.  We help them make the data more trustworthy, more useful, and ask them to evaluate the result. Our curators need to have a curiosity for data as an information source and as an evidence, but do not need to have a statistic, computer science or data science background. [⏩ Get inspired to be our data curator](#inspiration) or immediately [⏩ Sign up as a data curator](#onboarding)
+
+Our data scientists and developers know how to check for data inconsistencies, improve the documentation, or bring the data to a form that it is easy to import into a database, a knowledge graph, or simply into a spreadsheet application like Excel or statistical software like SPSS or STATA.
 
 ## Reproducible research {-}
 
