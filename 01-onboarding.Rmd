@@ -23,9 +23,9 @@ You can download the Curatorial template from [here](https://raw.githubuserconte
 
 - [x] You must send a ⏺ profile picturethat is at least 500px wide (jpg or png format.) It can be bigger, and preferrably not a very "narrow" cut, as all avatars will be behind a ciruclar mask (see [other curators](https://music.dataobservatory.eu/#contributors).)
 
-- [ORCiD](https://orcid.org/) Your ⏺ ORCiD ID, which will enable us to unambigously attribute your contributions. ORCiD is used in open science and other publishing to unambigously attribute copyrights and other intellectual property rights to a person. It takes a few minutes to register an account if you do not have it yet. We will attribute your name and ORCiD ID on all assets that you contribute to. It is particularly useful if your name has non-latin characters, your name is given in the Eastern name order, or your name has changed after marriage, etc. 
+- [x] [ORCiD](https://orcid.org/) Your ⏺ ORCiD ID, which will enable us to unambigously attribute your contributions. ORCiD is used in open science and other publishing to unambigously attribute copyrights and other intellectual property rights to a person. It takes a few minutes to register an account if you do not have it yet. We will attribute your name and ORCiD ID on all assets that you contribute to. It is particularly useful if your name has non-latin characters, your name is given in the Eastern name order, or your name has changed after marriage, etc. 
 
-```{r}
+```{r orcigpng}
 knitr::include_graphics(file.path("png", "orcid.png"))
 ```
 
@@ -72,7 +72,7 @@ knitr::include_graphics(file.path("png", "zotero.png"))
 
 ::: {.rmdnote data-latex="{note}"}
 
-Our [Digital Music Observatory]() and [Cultural Creative Sectors Industries Data Observatory]() work with artists and creative professionals, or [Digital Music Observatory]() and [Competition Data Observatory]() with legal professionals. We try to accommodate the needs of curators from different professional communities.
+Our [Digital Music Observatory](https://music.dataobservatory.eu/) and [Cultural Creative Sectors Industries Data Observatory](https://ccsi.dataobservatory.eu/) work with artists and creative professionals, or [Green Deal Data Observatory](https://greendeal.dataobservatory.eu/) and [Competition Data Observatory](https://competition.dataobservatory.eu/) with legal professionals. We try to accommodate the needs of curators from different professional communities.
 
 :::
 

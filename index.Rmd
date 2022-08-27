@@ -116,8 +116,11 @@ html_caption('Read our full blogpost: [The Data Sisyphus](https://dataobservator
 
 The good news about documentation and data validation costs is that they can be shared. If many users need GDP/capita data from all over the world in euros, then it is enough if only one entity, a data observatory, collects all GDP and population data expresed in dollars, korunas, and euros, and makes sure that the latest data is correctly translated to euros, and then correctly divided by the latest population figures. These task are error-prone,and should not be repeaeted by every data journalist, NGO employee, PhD student or junior analyst. This is one of the services of our data observatory.
 
-
 ## Impact {-}
+
+```{r}
+knitr::include_graphics(file.path("png", "go_fair.png"))
+```
 
 Our system is designed to help the `Findability`, `Accessibility`, `Interoperability`, and `Reuse` of digital assets, particularly datacubes and datasets used in statistics and data analysis. The FAIR “…emphasise machine-actionability (i.e., the capacity of computational systems to find, access, interoperate, and reuse data with none or minimal human intervention) because humans increasingly rely on computational support to deal with data as a result of the increase in volume, complexity, and creation speed of data.” 
 
