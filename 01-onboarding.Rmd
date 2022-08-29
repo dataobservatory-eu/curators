@@ -43,18 +43,29 @@ knitr::include_graphics(file.path("png", "contributor_covenant.png"))
 
 ::: {.rmdnote data-latex="{note}"}
 
-If your contributions are occasional, probably you should use only **Keybase** to ask questions. If you will work with us frequently, or on more complex research outputs, it is best to use **Github** for file sharing and **Zotero** for sharing bibliographic citations.
+If your contributions are occasional, probably you should use only **Keybase** to ask questions. If you will work with us frequently, or on more complex research outputs, it is best to use **Github** for simple project management (task tracking) and more complex file sharing, and **Zotero** for sharing bibliographic citations.
 
 :::
 
-If you need help, get in touch with us, our preferred way of communication is  **Keybase**. It is an open-source, privacy and security concerned alternative to *Slack* and similar chat-based collaboration tools. Our observatories and Listen Local have their Keybase channels where you can interact with other curators and developers. [⇨ Annex / Collaboration tools / Keybase](#keybase) [⏯ keybase.io](#https://keybase.io/)
+**Keybase** is our preferred tool to get in touch with us and ask questions, instead of emails, Whatsapp/Viber/Messenger/Telegram/Signal, that not everybody uses, and some people use for private matters only. *Keybase* is an open-source, free, privacy- and security-concerned alternative to *Slack* and similar chat-based collaboration tools. It is fully integrated with Zoom (which owns it recently) and Google Meet, so you can switch immediately to audio or video calls. Our observatories and Listen Local have their Keybase channels where you can interact with other curators and developers. [⇨ Annex / Collaboration tools / Keybase](#keybase) [⏯ keybase.io](#https://keybase.io/)
 
-Git and Github are open source and free services that allow the synchronization of text files, Word documents, Excel spreadsheets, and even software code in a much more reliable, and platform independent way than rival products, i.e., *Microsoft Sharepoint*, or *Microsoft OneDrive*, and *Google Drive*, or *Drobox*. It works reliable on Windows (Microsoft owns it), and Linux and Mac/BSD systems, too. Github is more difficult to use than Google Drive, but allows a lot more features, and some of them are essential for exchanging code or publication-ready articles.  A curator does not need to use Github, unless he or she wants to cooperate on scientific outputs.  [⏯ github.com](https://github.com//)
+**Github**, a Git-based open source and free service (currently owned by Microsoft) is our tool for a very simple task tracking in a kanban-style.
+
+```{r}
+knitr::include_graphics(file.path("png", "anyway-kanban-gh.png"))
+```
+_Image credit: [Anyway Kanban](https://github.com/cat-street/anyway-kanban)_ 
+
+For tracking tasks, you only need a web browser and an account on Github.  All project managers in our data observatories must have one, and curators are highly encouraged to join them, too. There are thousands of alternatives for *Github's kanban*, but we use it, because it integrates well with a far better product than i.e., *Microsoft Sharepoint*, or *Microsoft OneDrive*, and *Google Drive*, or *Drobox* for sharing file resources, such a clear and processed documents, spreadsheets, SPSS files, website elements, media files.
+
+Because Github is a more advanced tool *for sharing files* than the aforementioned shared drives (it prevents the creation of conflicting versions of the same text, table or photograph), and because it integrates with a simple task management, it is also far more complicated to set-up/install and learn.  Github is a very simple for task management, to synchronize the file assets behind the tasks requires a bit of attention. But if you decide to go this way, you can build websites with us, blogs, publish journal articles, or even books. In scientific or open-source software cooperation using Github is fairly standard, so it will improve your ability to interact with colleagues. A curator does not need to use Github, unless he or she wants to cooperate on scientific outputs.  [⏯ github.com](https://github.com//)
 
 - [x] If you have an existing Github account, please give us your [⏺ Github account ID](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) as the preferred way of exchanging files. 
-- [ ] If you do not have one, you can consider using Github, after consulting our annex: [⏩ Annex / Collaboration tools / Github](#keybase)
+- [x] If you do not have one, please create a free account with a username that you would use professionally. 
+- [ ] Please consider synching your files via Github with us after consulting our annex: [⏩ Annex / Collaboration tools / Github](#keybase).
+- [ ] We can automate the issuing of DOI's to all your figures, code, text automatically via Zenodo and Github. 
 
-Our project management dashboard and the FAQ is on Github, too, and all our source files will be versioned on Github. 
+
 
 ## Bibliography management
 

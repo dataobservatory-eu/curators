@@ -5,3 +5,17 @@
 We follow the principles of reproducible research, that increases `data quality` with the use of open algorithms, provision of full data (lifecycle) history, unit testing, facilitating external review and audit.
 
 :::
+
+## High Usability {.unnumbered #data-sisyphus}
+
+::: {.rmdnote data-latex="{note}"}
+
+Our datasets are `tidy`, `imputed` or `forecasted`, and `visualized`, which means that they are immediately ready to be used in Excel-like spreadsheet applications, SPSS or STATA-like statistical software, or for reporting in a book, in a newsletter or on a website.
+
+:::
+
+The [dataobservatory.eu](https://dataobservatory.eu/) products are not made by official statistical agencies, but triangular data ecosystems of business, policy, and academic users.  This allows us to be professionally subjective and therefore achieve a `higher usability`. 
+
+Our `data curators` professionally perform those error-prone and laborious tasks (currency conversion, unit conversions, linear interpolation of missing observations, etc.) that data analysts hate and less tech-savvy users often get wrong.  Our datasets often go through more than a hundred automated controls before they are presented to the user to make sure that the data quality is excellent, and the datasets are indeed readily available for use. These services are not offered by statistical agencies because they are subjective to the knowledge of the data curator.
+
+Tidy data is `ready to be published`, ready to placed on a visual chart, or placed on a map.  Tidiness is a rigorous concept in data science.  Our data observatories come with many extra services that help the effective communication of the observatory partners’ knowledge.  We automatically create charts and tables that are every day refreshed for your publications.  We can automatically place them into newsletter templates. We automatically place them on the (documentation part) of your website. We can even automate most of the process to put them into an annual report or statistical yearbook that you can publish in e-bookstores, send to global libraries, sell or give away to your stakeholders
