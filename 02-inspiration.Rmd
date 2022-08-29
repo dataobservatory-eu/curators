@@ -16,9 +16,20 @@ The Schmidt Pain Index, as its informally known, runs from 1-4. The common honey
 
 “We need to improve conservation by improving wildlife monitoring. Counting plants and animals is really tricky business.” [⏯ Big Data Is Saving This Little Bird](https://fivethirtyeight.com/features/big-data-is-saving-this-little-bird/)
 
-## Remain Critical {#critical-attitude}
 
-Sometimes we put our hands on data that looks like a unique starting point to create a new indicator. But our indicator will be flawed if the original dataset is flawed.   And it can be flawed in many ways, most likely that some important aspect of the information was omitted, or the data is autoselected, for example, under-sampling women, people of color, or observations from small or less developed countries.
+## From Datasets and Files to Living Web Resoures {web-30}
+
+### Web 3.0
+
+
+```{r}
+knitr::include_graphics(here::here("png", "weblinks.png"))
+```
+
+
+## Remain Critical: Ethical Data, Trustworthy AI {#critical-attitude}
+
+Sometimes we put our hands on data that looks like a unique starting point to create a new indicator. But our indicator will be flawed if the original dataset is flawed. And it can be flawed in many ways, most likely that some important aspect of the information was omitted, or the data is autoselected, for example, under-sampling women, people of color, or observations from small or less developed countries.
 
 ### Machine Learning from Bad Data: Weapons of Math Destruction, Algorithms of Oppression
 
@@ -43,3 +54,4 @@ Catherine D'Ignazio and Lauren F. Klein: [⏯ Data Feminism](https://mitpress.mi
 ### Looking Behind Data: Moving to America's Worst Place to Live
 
 Christopher Ingraham wrote [⏯ a quick blog post](https://www.washingtonpost.com/gdpr-consent/?next_url=https%3a%2f%2fwww.washingtonpost.com%2fnews%2fwonk%2fwp%2f2015%2f08%2f17%2fevery-county-in-america-ranked-by-natural-beauty%2f) for The Washington Post about an obscure USDA data set called the `natural amenities index`, which attempts to quantify the natural beauty of different parts of the country. He described the rankings, noted the counties at the top and bottom, hit publish and did not think much of it. Almost immediately he started to hear from the residents of northern Minnesota, who were not very happy that Chris had written, “the absolute worst place to live in America is (drumroll, please) … Red Lake County, Minn.” He could not have been more wrong … a year later [he moved](https://fivethirtyeight.com/features/he-called-it-americas-worst-place-to-live-now-hes-moving-there/) to Red Lake County with his family.
+

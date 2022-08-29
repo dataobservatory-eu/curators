@@ -1,4 +1,4 @@
-# Data Sources {#datasource}
+# From Data Sources to Resources {#datasource}
 
 ::: {.rmdnote data-latex="{note}"}
 

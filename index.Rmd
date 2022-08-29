@@ -2,27 +2,34 @@
 title: "Data Curation on the dataobservatory.eu Open Knowledge Platforms"
 author: "Daniel Antal"
 date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
+output:
+  html_document:
+    df_print: paged
 documentclass: book
 classoption: openany, a4paper, oneside
 lang: en
 papersize: a4
-fontsize: "fontsize=12pt"
+fontsize: fontsize=12pt
 linestretch: 1.1
 urlcolor: blue
 linkcolor: blue
-geometry: "left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm"
-bibliography: [bib/dataset.bib, bib/datainteroperability.bib, bib/datagovernance.bib, bib/trustworthyAI.bib]
+geometry: left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm
+bibliography:
+- bib/dataset.bib
+- bib/datainteroperability.bib
+- bib/datagovernance.bib
+- bib/opa.bib
+- bib/opendata.bib
+- bib/trustworthyAI.bib
 url: https://curators.dataobservatory.eu/
-# cover-image: path to the social sharing image like images/cover.jpg
 description: |
   This is an introduction for the dataobservatory.eu (future) curators.
 link-citations: yes
-github-repo: dataobservatory-eu/curators
+github-repo: "dataobservatory-eu/curators"
+site: bookdown::bookdown_site
 ---
 
 # Open Collaboration With Data Curators {.unnumbered}
-
 
 
 ```{r setupknitr, include=FALSE}
@@ -39,6 +46,7 @@ library(kableExtra)
 library(here)
 here::here()
 source(here("R", "html_caption.R"))
+# Ellipsis: …
 
 is_word_output <- ifelse (knitr::is_html_output()|knitr::is_latex_output(), FALSE, TRUE)
 ```
@@ -49,14 +57,17 @@ Big data creates **inequalities**, because only the world’s biggest global cor
 
 :::
 
-`Big data creates inequalities`.  Only the world’s biggest global corporations, best endowed universities and strongest governments can maintain long, well-designed, global data collection programs and build huge data lakes. We aim to balance these inequalities in the spirit of the new European Data Governance Act with fostering the re-use of public sector information, increasing the interoperability (integration capacity) of public and private data assets, and helping with practical tools `data sharing` and voluntary `data altruism`.
+We are balancing these inequalities in the spirit of the new European Data Governance Act with fostering the re-use of public sector information, increasing the interoperability (integration capacity) of public and private data assets, and helping with practical tools `data sharing` and voluntary `data altruism`.
+
+We are taking a new and modern approach to the `data observatory` concept and modernizing it with the application of 21st century data and metadata standards, the new results of reproducible research, and data science. Many centralized data observatories only put research reports and spreadsheet or SPSS files on the internet, which are usually hard to find, very difficult to import for use, and to join with your database or other research data tables. We apply instead the web 3.0 approach, when our reports and datasets are self-synchronizing with their sources; they are updating datasets and re-visualizing them, correcting the footnotes and bibliographies, and place the new release of the report directly into global library systems. We can even build pipelines to legally open datasets that have never been released on the web 2.0 and cannot be downloaded with a browser.
 
 ```{r, ObservatoryCollage, results='asis', out.width='80%'}
 knitr::include_graphics(here::here("png", "observatory_collage_16x9_800.png"))
 html_caption('*Various UN and OECD bodies, and particularly the European Union support or maintain more than 60 data observatories, or permanent data collection and dissemination points.*')
 ```
 
-We are taking a new and modern approach to the `data observatory` concept, and modernizing it with the application of 21st century data and metadata standards, the new results of reproducible research, and data science. Various UN and OECD bodies, and particularly the European Union support or maintain more than 60 data observatories, or permanent data collection and dissemination points, but even these do not use these organizations and their members open data. We are building open-source data observatories, which run open-source statistical software that automatically processes and documents reusable public sector data (from public transport, meteorology, tax offices, taxpayer funded satellite systems, etc.) and reusable scientific data (from EU taxpayer funded research) into new, high quality statistical indicators.
+We have studied about 80 EU, UN, OECD data observatories, including already defunct ones, and we have found that almost none of them use these 21st century solutions. We are building open-source data observatories, which run open-source statistical software that automatically processes and documents reusable public sector data (from public transport, meteorology, tax offices, taxpayer funded satellite systems, etc.) and reusable scientific data (from EU taxpayer funded research).
+
 
 ::: {.rmdnote data-latex="{note}"}
 
@@ -64,22 +75,99 @@ This document is intended for curators of the data observatories. For an introdu
 
 :::
 
-We believe in evidence-driven, open policy analysis, open science, and open government. We believe that humans are able to collect information, process and organize it, and form informed opinions. We believe in trustworthy artificial intelligence, AI that uses big data subject to human agency and ethical or legal constraints.
+## Stop reinventing the wheel… {-}
 
-We would like to find new collaboratos, professionals, researchers or citizen scientists in an institutional (business) or personal capacity who share our values and would like to create more informative datasets, indicators, and visualizations.  We follow the open collaboration method used in open knowledge systems (such as Wikipedia) or open source software development. We are following the [⏯ Contributor Covenant Code Of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) originating in open source software development to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation. 
+_When was a file downloaded from the internet? What happened with it sense? Are their updates? Did the bibliographical reference was made for quotations? Missing values imputed? Currency translated? Who knows about it – who created a dataset, who contributed to it? Which is an intermediate format of a spreadsheet file, and which is the final, checked, approved by a senior manager?_ 
 
-If you already know that you would collaborate with us on the creation of better data products, please refer to our practical [⏩ onboarding](#oboarding) essentials.
 
-## Motivation {-}
+```{r, SisyphusBodleian, results='asis', out.width='70%'}
+knitr::include_graphics(here::here("png", "Sisyphus_Bodleian_Library.png"))
+html_caption('Read our full blogpost: [The Data Sisyphus](https://dataobservatory.eu/post/2021-07-08-data-sisyphus/)')
+```
+
+When a data users, aka a data curator finds a good resource of data or information in a statistical agency, an observatory, a library, he or she will likely go back to that page many times over the years, and download the same tables … because they are lost, because they have a new release, because their bibliographical information was missing. This is a very error-prone work that no senior consultant, advisor, researcher, or laywer gets credited for. We do not believe that the answer to this is to task PhD-candidates, trainee lawyers, or interns to do these manual tasks over and over again, because they will not like it and they will not do it right.
+
+In our vision, computers should do this taks perfectly, painlessly, and every day. If you have used a data source, such as the website of Eurostat or Europeana, the Library of Congress, or the Zenodo science repository at least twice, it is very likely that you will go back again. And again. And again. Our data observatories are designed to do this for you automatically.  Retrieve, format, improve, document, and make available all resources that you use in your business or scholarly (research or education) practice.
+
+## … let the algorithm work for you {-} 
+
+::: {.rmdnote data-latex="{note}"}
+
+In our data observatories, it is mainly the task of the computerized machine to collect, control, prosess, format, archive and publish the data. Therefore, our users and data curators need not be statisticians or data scientists: they should be able what should the computers collect, or they should be able to stop the computer if something goes into a wrong, negative, unethical or unlawful direction. 
+
+:::
+
+Our curators point us to data that they find interesting or useful, usually from their research, professional or artistic practice.  We help with making the data every day downloaded, controlled, processed, polished, visualized in a form that they can readily trust, and use in their research, business or artistic practice. Our curators need to have a curiosity for data as an information source and as an evidence, but do not need to have a statistic, computer science or data science background. [⏩ Get inspired to be our data curator](#inspiration) or immediately [⏩ Sign up as a data curator](#onboarding)
 
 **Who should become a data curator?** You do not need to be a data scientist, a statistician, or a data engineer.  We are looking for professionals, researchers, or citizen scientists who are interested in data and its visualization, and its potential to form the basis of informed business or policy decisions and to provide scientific or legal evidence. Our ideal curators share a passion for data-driven evidence or visualizations, and have a strong, subjective idea about the data that would inform them in their work. See our [⏩ See our inspriation chapter](#inspiration).
 
-**Why we need better data?** Data is hardly informative---it may be a page in a book, a file in an obsolete file format on a governmental server, an Excel sheet that you do not remember to have checked for updates.  Most data are useless, because we do not know how it can inform us, or we do not know if we can trust it. Unfortunately, even most data on open science repositories, or data made public on the basis of the EU open data regime (or the freedom of information regime of the U.S.) is useless without further work. 
+## From downloading to curating the data {-}
 
->“Data is potential information, analogous to potential energy: work is required to release it.”
-> ---citation
+- [x] The web 1.0 refers to the world wide web, where text and files could be connected and retrieved, mainly via the http(s) protocol from a URL “address”. 
+- [x] The web 2.0 refers to the social media where people are continously connected via various “platforms”.
+- [x] The web 3.0 refers to a generalized world wide web, where not only documents and files, but any identifiable resource (digital, physical, or abstract) present on or connected to the world wide web an be interlinked. It is often called the web of data, because it allows data tables and databases to connect to each other.  
 
-## Data sources {-}
+A research report becomes a 'live report' in the web 3.0, because you may have a self-refreshing book as a resource that synchronizes its data with Eurostat, the works it refers to with libraries via the Europeana. A `live report' research automation can keep your 'report' self-refreshing, with constantly updated new data, newly generated tables, visualizations, footnotes and bibliography. More examples and insipration in [⏩ From Datasets and Files to Living Web Resoures](#web-30).
+
+Instead of having to download, process, and chart your data, you become a 'data curator', who has to define what information should constantly synchronize with your resource, i.e. your 'report', 'newsletter', 'website' or 'databasise'. 
+
+In the era of the web 3.0 and reproducible (automated) research, downloading, formatting data is no longer competitive with junior consultants and lawyers, PhD students. Computers are far better in these repetitive and monotonous taks - they can correct a data table or a bibliography a hundred times in a minute.
+
+## Increase your impact {-}
+
+Regardless if you want to target policy-makers, students, or you want to sell your business intelligence, we will help you to increase your Impact and maximize your performance to make your scientific, educational, policy or business content more `Findable`, `Accessible`, `Interoperable`, and `Reusable`.
+
+```{r gofairintro}
+knitr::include_graphics(file.path("png", "go_fair.png"))
+```
+
+- [x] Your research product (dataset, database, article, website, blogpost, report, book) will get more viewers, readers, and interactions.
+- [x] You do not have to worry about the use of your datasets in Excel, SPSS or STATA; importing into relational databases. Your reports will read on Kindle reader or on paper, in website format or in long-read. Our systems will make your research products accessible on a very wide range of contexts, devices, platforms, and software environments.
+- [x] Your knowledge products will become live web resources that will interconnect with statistical resources, libraries, industry knowledge-hubs. They will refresh themselves, and let other knowledge systems when they have new versions.
+- [x] Your research products, including datasets, databases, visualizations, reports, bibliographies will self-synchronize with new versions of your sources, allowing you to recast market research, educational material or scientific experiments every quarter or year.
+
+We will make such a big leap with the presentation and release of your research results, as in 1995 the world wide web did. The first web allowed it to be found and downloaded all over the world.  The web 2.0 connected researchers via the academic social media in new ways. The web 3.0 will allow that our machines will connect your research with library databases, place them into open science repositories, and self-refresh their datasets, visualizations, bibliographies, to stay synchronized with the rest of the world.
+
+By connecting directly to the worlds library systems and repositories, the findability of your research products will exponentially increase.  We will use the latest data science to make them as accessible as possible: we use strictly defined structures to make their import into relational databases, spreadsheet applications like Excel, SPSS, Stata plug-and-play. Your research results will be available for all major software vendors, and your research reports simultaneously translated to EPUB, Kindle, PDF, Word, PowerPoint, Apple software, … you name it. The ongoing, permanent synchronization with libraries, statistical data sources, even non-public databases will keep your research product reusable for you all the time.
+
+::: {.rmdnote data-latex="{note}"}
+
+We will make a no-nonsense application of the FAIR reuirements enshrined in most EU-mandated/sponsored research.  We will guide you through the often hard to imagine requirement to “…emphasise machine-actionability (i.e., the capacity of computational systems to find, access, interoperate, and reuse data with none or minimal human intervention) because humans increasingly rely on computational support to deal with data as a result of the increase in volume, complexity, and creation speed of data.”  Read more on our [⏩ FAIR metadata handling](https://dataset.dataobservatory.eu/articles/metadata.html) (our try our software for R users).
+
+:::
+
+## Learning machines and trustworthy AI {-}
+
+The web 3.0 enables computers and their robot services to constantly obtain new information and build machine learning (AI) algorithms to exploit such information. Machine learning is changing how intelletual property is being created and exploited. AI algorithms recommend people new films and songs to listen to; it suggest target journals for academics for their draft article, and so on.
+
+Machine learning can have disastrous or highly unethical results if the algorithm is badly trained, or if the algorithm is learning from false or biased information. Women, ethnic minorities and people of color have been traditionally under-represented in knowledge systems, and therefore any machine learning algorithm that learns from past records, libraries, and datasets is often per se placing womxn, people of color, or people from smaller nations at a disadvantage.
+
+The European Union is advocating the ethical use of AI. In our opinion, ethical use of AI starts with the ethical creation of any resource that algorithms may exploit. One of the most fundamental criteria of trustworthy AI is that an autonomous, machine-learning driven system is never left alone without human agency. Our dataobservatory.eu products help our academic, business, educational and policy users to reap the benefits of big data and machine learning in an ethical manner.  The most fundamental guarrantee of trustworthy AI in our systems is that every dataset, even if largely collected or processed automatically, remains under constant human curation.
+
+We help our curators to gather data from questionnaire datasets, big data soures, statistical resource in a faster, more effective, less error-prone way; in return we ask them to remain critical, and oversee dubious items in our collections.  For example, computers usually guess correctly the gender of a person in a database or bibliography by given names. However, we do not find it acceptable that our computers are assigning gender without recourse to human orversight, and the ability for correction, maintaining the fundamental right of people to chose their gender identity. See [⏩ Remain Critical: Ethical Data, Trustworthy AI](#critical-attitude) for further inspiration and examples.
+
+
+## Synchronize your research with the world {.unnumbered #dataquality}
+
+::: {.rmdnote data-latex="{note}"}
+
+we help our observatory partners to bring their own datasets and databases to a form that can connect to other industry, scientific, government or library sources and refresh or enhance themselves.
+
+:::
+
+```{r zenodoexample}
+knitr::include_graphics( here::here("jpg", "zenodo_record_example.jpg"))
+```
+
+We support the machine-reading of our data products and their importing into relational databases. Our own API organizes the datasets into an SQL relational database, which allow more complex querying for expert users in SQL, or the dbplyr extension of the R language which allows the mixing of dplyr and SQL queries (See \@ref(database) [Relational Databases, SQL and API](#database)). 
+
+Our data observatories are data-as-service and research-as-service providers, and they are designed to synchronize knowledge with other trusted information agents, like global libraries, global statistical agencies, or Wikidata (that powers many structured Wikipedia pages) via the semantic web. We are still experimenting with these features 
+ It also contains codebooks and other metadata organized in a format that offers an easy importing and serialisation into RDF and SPARQL applications (See \@ref(rdf) [Data-as-service, Linked Data, SPARQL](#rdf))
+ 
+ Our system is designed to help the `Findability`, `Accessibility`, `Interoperability`, and `Reuse` of digital assets, particularly datacubes and datasets used in statistics and data analysis. The FAIR “…emphasise machine-actionability (i.e., the capacity of computational systems to find, access, interoperate, and reuse data with none or minimal human intervention) because humans increasingly rely on computational support to deal with data as a result of the increase in volume, complexity, and creation speed of data.” 
+
+
+## Data (Re)sources {-}
 
 ::: {.rmdnote data-latex="{note}"}
 
@@ -89,11 +177,18 @@ We work with original, primary data collection, with big data collection from im
 
 Working with data is hard.  No matter if the data is coming from a reliable social science archive, like GESIS (which holds plenty of social science data about Europe), or Eurostat (Europe's statistical umbrella authority), or from a new fieldwork, data needs to be polished to a form that it can be trusted and reused.
 
-Our curators point us to data that they find interesting or useful, usually from their research, professional or artistic practice.  We help them make the data more trustworthy, more useful, and ask them to evaluate the result. Our curators need to have a curiosity for data as an information source and as an evidence, but do not need to have a statistic, computer science or data science background. [⏩ Get inspired to be our data curator](#inspiration) or immediately [⏩ Sign up as a data curator](#onboarding)
 
 Our data scientists and developers know how to check for data inconsistencies, improve the documentation, or bring the data to a form that it is easy to import into a database, a knowledge graph, or simply into a spreadsheet application like Excel or statistical software like SPSS or STATA.
 
-## Reproducible research {-}
+The aim of your engineers is to enter into the phase of web 3.0, when our curators can synchronize data with trusted sources: for example, download ingredients from Eurostat or Europeana, add their knowledge, and return the data publication to the open science repository Zenodo, when these organizations (and other professional users) immediately find it.
+
+```{r, message=FALSE}
+knitr::include_graphics(here::here("png", "weblinks.png"))
+```
+
+
+
+## Quality Control: Reproducible research {-}
 
 ::: {.rmdnote data-latex="{note}"}
 
@@ -105,26 +200,30 @@ We follow the principles of reproducible research, that increases `data quality`
 
 Read more about our [reproducible research](#reproducible) practice. 
 
+
+
+
+We believe in evidence-driven, open policy analysis, open science, and open government. We believe that humans are able to collect information, process and organize it, and form informed opinions. We believe in trustworthy artificial intelligence, AI that uses big data subject to human agency and ethical or legal constraints.
+
+We would like to find new collaboratos, professionals, researchers or citizen scientists in an institutional (business) or personal capacity who share our values and would like to create more informative datasets, indicators, and visualizations.  We follow the open collaboration method used in open knowledge systems (such as Wikipedia) or open source software development. We are following the [⏯ Contributor Covenant Code Of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) originating in open source software development to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation. 
+
+If you already know that you would collaborate with us on the creation of better data products, please refer to our practical [⏩ onboarding](#oboarding) essentials.
+
+## Motivation {-}
+
+
+
+**Why we need better data?** Data is hardly informative---it may be a page in a book, a file in an obsolete file format on a governmental server, an Excel sheet that you do not remember to have checked for updates.  Most data are useless, because we do not know how it can inform us, or we do not know if we can trust it. Unfortunately, even most data on open science repositories, or data made public on the basis of the EU open data regime (or the freedom of information regime of the U.S.) is useless without further work. 
+
+>“Data is potential information, analogous to potential energy: work is required to release it.”
+> ---citation
+
+
+
 ## Informative data {-}
-
-_When was a file downloaded from the internet? What happened with it sense? Are their updates? Did the bibliographical reference was made for quotations? Missing values imputed? Currency translated? Who knows about it – who created a dataset, who contributed to it? Which is an intermediate format of a spreadsheet file, and which is the final, checked, approved by a senior manager?_ 
-
-```{r, SisyphusBodleian, results='asis', out.width='70%'}
-knitr::include_graphics(here::here("png", "Sisyphus_Bodleian_Library.png"))
-html_caption('Read our full blogpost: [The Data Sisyphus](https://dataobservatory.eu/post/2021-07-08-data-sisyphus/)')
-```
 
 The good news about documentation and data validation costs is that they can be shared. If many users need GDP/capita data from all over the world in euros, then it is enough if only one entity, a data observatory, collects all GDP and population data expresed in dollars, korunas, and euros, and makes sure that the latest data is correctly translated to euros, and then correctly divided by the latest population figures. These task are error-prone,and should not be repeaeted by every data journalist, NGO employee, PhD student or junior analyst. This is one of the services of our data observatory.
 
-## Impact {-}
-
-```{r}
-knitr::include_graphics(file.path("png", "go_fair.png"))
-```
-
-Our system is designed to help the `Findability`, `Accessibility`, `Interoperability`, and `Reuse` of digital assets, particularly datacubes and datasets used in statistics and data analysis. The FAIR “…emphasise machine-actionability (i.e., the capacity of computational systems to find, access, interoperate, and reuse data with none or minimal human intervention) because humans increasingly rely on computational support to deal with data as a result of the increase in volume, complexity, and creation speed of data.” 
-
-We publish your data, data shared with your, data collected for you, and reused data in a way that it is easy for computers, libraries, users to find it. Read more on our [FAIR metadata handling](https://dataset.dataobservatory.eu/articles/metadata.html) (our try our software for R users).
 
 
 **Governance principles**
@@ -151,40 +250,9 @@ We publish your data, data shared with your, data collected for you, and reused 
 
 `r if(knitr::is_latex_output()) {"\\end{comment}"}`
 
-## Big data for all{.unnumbered #big-data-for-all}
-
-<!-- 
-See conditional evaluation 
-https://stackoverflow.com/questions/39550732/is-there-a-way-to-have-conditional-markdown-chunk-execution-in-rmarkdown
-::: {.infobox .caution data-latex="{caution}"}
-**BIG DATA FOR ALL**
-
-Thank you for noticing this **new notice**! Your noticing it has
-been noted, and _will be reported to the authorities_!
-:::
- -->
-
 
 Our data observatories focus participants to collect only new data, and to `reuse already existing data` in the world’s statistical agencies, libraries, encyclopedias, or digital platforms. With harmonized data collection, particularly in the form of surveys, you can immediately give a history and international context to your data. We tap into governmental and scientific data collections that businesses or civil society organizations could never replicate data collected by satellites or anonymized data collected by tax or statistical authorities. We use metadata standardization and the RDF (semantic web) concept to constantly synchronize our data observatories with knowledge in the worlds large libraries, encyclopedias, and statistical agencies.
 
-## Synchronize your research with the world {.unnumbered #dataquality}
-
-::: {.rmdnote data-latex="{note}"}
-
-we help our observatory partners to bring their own datasets and databases to a form that can connect to other industry, scientific, government or library sources and refresh or enhance themselves.
-
-:::
-
-```{r zenodoexample}
-knitr::include_graphics( here::here("jpg", "zenodo_record_example.jpg"))
-```
-
-We support the machine-reading of our data products and their importing into relational databases. Our own API organizes the datasets into an SQL relational database, which allow more complex querying for expert users in SQL, or the dbplyr extension of the R language which allows the mixing of dplyr and SQL queries (See \@ref(database) [Relational Databases, SQL and API](#database)). 
-
-Our data observatories are data-as-service and research-as-service providers, and they are designed to synchronize knowledge with other trusted information agents, like global libraries, global statistical agencies, or Wikidata (that powers many structured Wikipedia pages) via the semantic web. We are still experimenting with these features 
- It also contains codebooks and other metadata organized in a format that offers an easy importing and serialisation into RDF and SPARQL applications (See \@ref(rdf) [Data-as-service, Linked Data, SPARQL](#rdf))
- 
- Our system is designed to help the `Findability`, `Accessibility`, `Interoperability`, and `Reuse` of digital assets, particularly datacubes and datasets used in statistics and data analysis. The FAIR “…emphasise machine-actionability (i.e., the capacity of computational systems to find, access, interoperate, and reuse data with none or minimal human intervention) because humans increasingly rely on computational support to deal with data as a result of the increase in volume, complexity, and creation speed of data.” 
 
 
 
@@ -196,19 +264,7 @@ Our data observatories are data-as-service and research-as-service providers, an
 
 Most small- and medium sized businesses, NGOs, civil society organizations, public policy units do not have the resources to employ data scientists and data engineers full-time, and such services on a part-time or ad hoc basis are too expensive for them.  This means that they are struggling with the data Sisyphus: munching spreadsheets into the desired format for a chart or a regression model, chasing missing data, trying to catch up on documentation or supervisory control, and in the meantime wasting countless of hours on boring work that computers to much better and with far less errors.
 
-## High Usability {.unnumbered #data-sisyphus}
-
-::: {.rmdnote data-latex="{note}"}
-
-Our datasets are `tidy`, `imputed` or `forecasted`, and `visualized`, which means that they are immediately ready to be used in Excel-like spreadsheet applications, SPSS or STATA-like statistical software, or for reporting in a book, in a newsletter or on a website.
-
-:::
-
-The [dataobservatory.eu](https://dataobservatory.eu/) products are not made by official statistical agencies, but triangular data ecosystems of business, policy, and academic users.  This allows us to be professionally subjective and therefore achieve a `higher usability`. 
-
-Our `data curators` professionally perform those error-prone and laborious tasks (currency conversion, unit conversions, linear interpolation of missing observations, etc.) that data analysts hate and less tech-savvy users often get wrong.  Our datasets often go through more than a hundred automated controls before they are presented to the user to make sure that the data quality is excellent, and the datasets are indeed readily available for use. These services are not offered by statistical agencies because they are subjective to the knowledge of the data curator.
-
-Tidy data is `ready to be published`, ready to placed on a visual chart, or placed on a map.  Tidiness is a rigorous concept in data science.  Our data observatories come with many extra services that help the effective communication of the observatory partners’ knowledge.  We automatically create charts and tables that are every day refreshed for your publications.  We can automatically place them into newsletter templates. We automatically place them on the (documentation part) of your website. We can even automate most of the process to put them into an annual report or statistical yearbook that you can publish in e-bookstores, send to global libraries, sell or give away to your stakeholders.
+.
 
 
 
